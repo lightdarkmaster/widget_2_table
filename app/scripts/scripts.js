@@ -170,7 +170,9 @@ function renderTable(monthlyWeeklyCounts, year, totalFiltered) {
 }
 
 ZOHO.embeddedApp.on("PageLoad", async () => {
-    const targetYear = 2025;
+    // const targetYear = 2025;
+    const targetYear = new Date().getFullYear();
+    
     document.body.innerHTML = `
         <div id="loadingDiv" style="text-align:center;padding:40px;background:#e3f2fd;border-radius:8px;margin:20px;">
             <h2>Loading Filtered Lead Data for ${targetYear}</h2>
